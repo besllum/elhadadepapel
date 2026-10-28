@@ -19,9 +19,8 @@
     cnt.innerHTML=res.length+' '+S.results+(active.length?' · <a href="#" id="clr">'+S.clear+'</a>':'');
     var c=document.getElementById('clr'); if(c)c.onclick=function(e){e.preventDefault();active=[];render();};
     out.innerHTML=res.slice(0,300).map(function(d){var h=S.root+d.u+'index.html';
-      return '<article class="post-item">'+(d.i?'<a class="entry-image" href="'+h+'"><img loading="lazy" src="'+S.root+esc(d.i)+'" alt=""></a>':'')+
-      '<div class="entry-details"><span class="entry-cat">'+esc(d.y)+'</span><h2 class="entry-title"><a href="'+h+'">'+esc(d.t)+'</a></h2>'+
-      (d.x?'<p class="entry-summary">'+esc(d.x)+'</p>':'')+'<a class="read-more" href="'+h+'">'+S.more+' →</a></div></article>';}).join('');
+      return '<article class="post-item"><div class="entry-details"><span class="entry-cat">'+esc(d.y)+'</span><h2 class="entry-title"><a href="'+h+'">'+esc(d.t)+'</a></h2></div>'+
+      (d.i?'<a class="entry-image" href="'+h+'"><img loading="lazy" src="'+S.root+esc(d.i)+'" alt=""></a>':'')+'</article>';}).join('');
   }
   chips.forEach(function(c){c.addEventListener('click',function(e){
     e.preventDefault(); var f=c.getAttribute('data-f'), i=active.indexOf(f);

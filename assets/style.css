@@ -152,3 +152,8 @@ a{color:inherit}
  .mega-title{color:#555;border-color:#ddd;padding:12px 16px 6px}
  .sub-menu.mega a{padding:8px 16px 8px 36px}
 }
+
+/* tarjetas: título encima de la foto, sin texto */
+.post-item .entry-details{padding:0 0 12px}
+.post-item .entry-title{margin:4px 0 0;font-size:22px}
+.post-item .entry-image img{aspect-ratio:4/5;object-fit:cover}
