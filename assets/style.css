@@ -208,3 +208,8 @@ a{color:inherit}
 .acc-grid a:hover img,.acc-grid a:focus img{filter:grayscale(0);transform:scale(1.03)}
 @media (max-width:700px){.acc-grid{grid-template-columns:repeat(2,1fr)}}
 @media (hover:none){.acc-grid img{filter:none}}
+
+/* fotos de entradas con texto mejorado */
+.entry-content .photos img{display:block;margin:0 auto 18px;max-width:100%;height:auto}
+.entry-content ol,.entry-content ul{padding-left:1.3em}
+.entry-content li{margin:.3em 0}
