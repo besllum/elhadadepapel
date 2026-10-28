@@ -1,5 +1,5 @@
 (function(){
-  var S=window.SEARCH, box=document.getElementById('q'), out=document.getElementById('results'), cnt=document.getElementById('count'), data=[], active=[];
+  var S=window.SEARCH, box=document.getElementById('q')||document.querySelector('.menu-search input'), out=document.getElementById('results'), cnt=document.getElementById('count'), data=[], active=[];
   var chips=[].slice.call(document.querySelectorAll('.filter-bar .chip'));
   function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');}
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
