@@ -188,3 +188,8 @@ a{color:inherit}
 @media (max-width:860px){.menu-search form{margin:10px 16px 14px}.menu-search input{width:100%}}
 
 .menu-label{display:block;padding:14px 20px;font:500 16px/1.2 var(--f-menu);text-transform:uppercase;letter-spacing:.14em;cursor:default}
+
+/* lista de webs (Dicen de nosotros) */
+.link-list{list-style:none;padding:0;margin:16px 0 40px;column-count:3;column-gap:32px}
+.link-list li{break-inside:avoid;padding:4px 0;border-bottom:1px solid var(--line)}
+@media (max-width:860px){.link-list{column-count:2}}
