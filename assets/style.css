@@ -157,3 +157,14 @@ a{color:inherit}
 .post-item .entry-details{padding:0 0 12px}
 .post-item .entry-title{margin:4px 0 0;font-size:22px}
 .post-item .entry-image img{aspect-ratio:4/5;object-fit:cover}
+
+/* títulos sin líneas + ruta de navegación */
+.section-title h2{display:block}
+.section-title h2::before,.section-title h2::after{content:none;display:none}
+.section-title{margin:18px 0 28px}
+.breadcrumb{font:500 12px/1.4 var(--f-menu);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-align:center;margin:34px 0 0}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:#000}
+.breadcrumb span[aria-current]{color:#000}
+.breadcrumb .sep{margin:0 10px;color:#c8c8c8}
+.single .entry-header,.page .entry-header{margin-top:18px}

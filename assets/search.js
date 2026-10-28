@@ -3,7 +3,9 @@
   var chips=[].slice.call(document.querySelectorAll('.filter-bar .chip'));
   function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');}
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  var crumb=document.querySelector('.breadcrumb span[aria-current]'), crumbBase=crumb?crumb.textContent:'';
   function sync(){
+    if(crumb){var names=active.map(function(f){var c=document.querySelector('.chip[data-f="'+f+'"]');return c?c.textContent:f;});crumb.textContent=names.length?names.join(' + '):crumbBase;}
     chips.forEach(function(c){c.classList.toggle('on',active.indexOf(c.getAttribute('data-f'))>-1);});
     var p=new URLSearchParams(); if(box.value.trim())p.set('q',box.value.trim()); if(active.length)p.set('f',active.join(','));
     history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:''));
