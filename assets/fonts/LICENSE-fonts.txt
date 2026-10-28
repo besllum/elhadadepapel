@@ -1,0 +1,1 @@
+Lato, Oswald y Roboto: SIL Open Font License 1.1 (https://openfontlicense.org). Archivos obtenidos de Fontsource (npm @fontsource/*).
