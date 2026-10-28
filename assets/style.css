@@ -168,3 +168,15 @@ a{color:inherit}
 .breadcrumb span[aria-current]{color:#000}
 .breadcrumb .sep{margin:0 10px;color:#c8c8c8}
 .single .entry-header,.page .entry-header{margin-top:18px}
+/* páginas con dos columnas */
+.entry-content:has(.cols){max-width:1100px}
+.cols{gap:48px;align-items:start}
+.cols .col>*:first-child{margin-top:0}
+.cols h3{font:400 24px/1.25 var(--f-title);text-transform:uppercase;letter-spacing:.03em;margin:28px 0 8px}
+/* texto en dos columnas (Nosotros) */
+.entry-content:has(.text-2col){max-width:1100px}
+.text-2col{column-count:2;column-gap:56px;text-align:justify}
+.text-2col p,.text-2col div{break-inside:avoid-column;margin:0 0 1em}
+.credits{text-align:center;margin-top:24px;font:500 13px/1.8 var(--f-menu);letter-spacing:.12em;text-transform:uppercase}
+.credits p{margin:0}
+@media (max-width:860px){.text-2col{column-count:1}}
