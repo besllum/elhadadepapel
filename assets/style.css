@@ -223,3 +223,25 @@ a{color:inherit}
 /* número de entradas por filtro */
 .chip .n{color:#b5b5b5;font-size:.82em;margin-left:.4em;font-weight:400}
 .chip:hover .n,.chip.on .n{color:#9a9a9a}
+/* título pegado a su foto: el hueco va arriba, no entre título y foto */
+.post-item{margin-bottom:56px}
+.post-item .entry-details{display:flex;flex-direction:column;justify-content:flex-end;min-height:calc(11px*1.4 + 22px*1.25*2 + 14px);padding:0 0 8px}
+.post-item .entry-title{min-height:0;margin:4px 0 0}
+@media (max-width:600px){.post-item .entry-details{min-height:0}.post-item{margin-bottom:40px}}
+/* móvil: menú alineado a la izquierda y filtros en filas deslizables */
+@media (max-width:860px){
+ .main-menu .menu{align-items:stretch;text-align:left}
+ .main-menu .menu>li{width:100%}
+ .main-menu .menu>li>a,.main-menu .menu>li>.menu-label{display:block;padding:14px 20px;text-align:left}
+ .sub-menu,.sub-menu.mega{width:100%;box-sizing:border-box;padding:0}
+ .sub-menu a,.sub-menu.mega a{display:block;padding:10px 20px 10px 36px;text-align:left}
+ .mega-title{display:block;padding:12px 20px 6px 36px}
+}
+@media (max-width:600px){
+ .filter-bar{margin-left:-16px;margin-right:-16px}
+ .filter-group{display:block;margin-bottom:6px}
+ .filter-group .filter-label{display:block;padding:0 16px;margin-bottom:6px}
+ .filter-group .chips{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:8px;padding:0 16px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .filter-group .chips::-webkit-scrollbar{display:none}
+ .filter-group .chip{flex:0 0 auto;font-size:13px;padding:7px 12px}
+}
