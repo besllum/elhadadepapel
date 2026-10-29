@@ -262,3 +262,7 @@ a{color:inherit}
 @media (max-width:600px){.size-ctrl input[type=range]{width:140px}.masonry.sized[style*="--cols: 2"] .post-item .entry-title,.masonry.sized[style*="--cols: 3"] .post-item .entry-title{font-size:16px}.masonry.sized[style*="--cols: 3"] .post-item .entry-cat{display:none}}
 .size-ctrl:has(+ .masonry:empty){display:none}
 .season-section[hidden]{display:none!important}
+/* cabecera animada */
+.hdr-anim{position:relative;display:block;max-width:1050px;margin:0 auto}
+.hdr-anim img{display:block}
+.hdr-anim canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
