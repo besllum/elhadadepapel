@@ -261,3 +261,4 @@ a{color:inherit}
 .masonry.sized[style*="--cols: 6"] .post-item .entry-cat{font-size:10px}
 @media (max-width:600px){.size-ctrl input[type=range]{width:140px}.masonry.sized[style*="--cols: 2"] .post-item .entry-title,.masonry.sized[style*="--cols: 3"] .post-item .entry-title{font-size:16px}.masonry.sized[style*="--cols: 3"] .post-item .entry-cat{display:none}}
 .size-ctrl:has(+ .masonry:empty){display:none}
+.season-section[hidden]{display:none!important}

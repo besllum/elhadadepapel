@@ -21,4 +21,10 @@
     ranked.sort(function(a,b){return rank(a.getAttribute('data-f'))-rank(b.getAttribute('data-f'));});
     ranked.concat(rest).forEach(function(c){box.appendChild(c);});
   });
+  /* portada: mostrar solo la sección de la próxima fiesta */
+  var secs=[].slice.call(document.querySelectorAll('.season-section[data-fiesta]'));
+  if(secs.length){
+    var best=null;secs.forEach(function(s){var f=s.getAttribute('data-fiesta');if(FEST[f]&&(!best||daysTo(f)<daysTo(best.getAttribute('data-fiesta'))))best=s;});
+    secs.forEach(function(s){s.hidden=(s!==best);});
+  }
 })();
